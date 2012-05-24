@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+   struct MyStruct
+    {
+       public int x;
+       public int y;
+    }
+   class structApp 
+   {
+       public static void Main()
+       {
+         MyStruct structFirst = new MyStruct();
+         MyStruct structSecond = new MyStruct();
+         structFirst.x = 1;
+         structFirst.y = 2;
+         structSecond.x = 10;
+         structSecond.y = 20;
+         Console.WriteLine("\nstructFirst is ={0},{1}",structFirst.x,structFirst.y);
+         Console.WriteLine("\nstructSecond is ={0},{1}",structSecond.x,structSecond.y);
+         Console.ReadLine();
+       }
+   }
+}

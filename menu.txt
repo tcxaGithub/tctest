@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class MyEnum
+    {
+        enum GetWeek 
+        {
+            MonDay,
+            TuesDay,
+            ThirsDay
+        }
+        public static void Main() 
+        {
+            string getweek;
+            GetWeek myWeek;
+            Console.Write("plese enter week");
+            getweek = Console.ReadLine();
+            myWeek = (GetWeek)Convert.ToInt32(getweek);
+            switch (myWeek) 
+            {
+                case GetWeek.MonDay:
+                    Console.WriteLine("\nToday is MonDay...");
+                    break;
+                case GetWeek.ThirsDay:
+                    Console.WriteLine("\nToday is ThirsDay...");
+                    break;
+                case GetWeek.TuesDay:
+                    Console.WriteLine("\nToday is TuesDay...");
+                    break;
+                default:
+                    Console.WriteLine("\nhave no week");
+                    break;
+            }
+            Console.WriteLine("\nToday is = {0}{1}", myWeek, (int)myWeek);
+            Console.Write("please enter again week:");
+            getweek = Console.ReadLine();
+        }
+
+        
+        
+    }
+}
